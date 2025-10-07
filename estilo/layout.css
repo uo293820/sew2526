@@ -1,0 +1,59 @@
+/* Marcelo Díez Domínguez - UO 293820 */
+/* Estilos de layout del proyecto MotoGP - Desktop */
+
+
+header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+header h1{
+  flex: 0 0 auto;
+}
+
+header nav{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 auto;
+}
+
+header nav a{
+  flex: 0 0 auto;
+}
+
+@media (min-width: 320px) and (max-width: 799px){
+
+  header{
+    flex-direction: column;   /* Re-definición intencional (responsive): antes row */
+    justify-content: center;  /* Re-definición intencional (responsive): antes space-between */
+    align-items: stretch;     /* Re-definición intencional (responsive): antes center */
+  }
+
+  header nav{
+    flex-direction: column;   /* Re-definición intencional (responsive): antes row */
+    justify-content: center;  /* Re-definición intencional (responsive): antes flex-end */
+    align-items: stretch;     /* Re-definición intencional (responsive): antes center */
+    gap: 6px;                 /* separación un poco menor en móvil */
+  }
+
+  header nav a{
+    width: 100%;  /* ocupan todo el ancho disponible en columna */
+  }
+
+  header + p{
+    display: none;  /* Re-definición intencional (responsive): antes visible */
+  }
+
+  video, audio{
+    width: 100%;
+    height: auto;
+  }
+}
